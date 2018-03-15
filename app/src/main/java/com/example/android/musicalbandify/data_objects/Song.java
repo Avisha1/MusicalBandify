@@ -8,14 +8,14 @@ public class Song {
 
     private String mName;
     private String mSinger;
-    private int mLength;
     private Stem [] mStems;
+    private int mIconImageId;
 
-    public Song(String name, String singer, int length, Stem[] stemArr) {
+    public Song(String name, String singer, int iconImageId) {
         mName = name;
         mSinger = singer;
-        mLength = length;
-        mStems = stemArr;
+//        mStems = stemArr;
+        mIconImageId = iconImageId;
     }
 
     public String getName() {
@@ -26,12 +26,12 @@ public class Song {
         return mSinger;
     }
 
-    public int getLength() {
-        return mLength;
-    }
-
     public Stem[] getStems(){
         return mStems;
+    }
+
+    public int getIconImageId(){
+        return mIconImageId;
     }
 
     //TODO
