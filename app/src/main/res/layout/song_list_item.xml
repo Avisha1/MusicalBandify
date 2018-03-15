@@ -2,38 +2,53 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
     android:minHeight="@dimen/list_item_height">
 
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center"
+        tools:text="picture"/>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="2">
+
     <TextView
-        android:id="@+id/name"
-        android:layout_width="0dp"
+        android:id="@+id/songName"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2"
-        tools:text="Shape Of you"/>
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:textSize="20dp"
+        android:textColor="#ff0f00"
+        tools:text="Shape of You" />
 
 
     <TextView
         android:id="@+id/singer"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        tools:text="Ed Sheeran"/>
+        android:gravity="top"
+        tools:text="Ed Sheeran" />
 
+</LinearLayout>
 
-    <TextView
-        android:id="@+id/length"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:text="3:46"/>
-
-
-    <TextView
+    <ImageView
         android:id="@+id/available_stems"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_width="5dp"
+        android:layout_height="51dp"
+        android:layout_gravity="center"
         android:layout_weight="1"
-        tools:text="G,D,V"/>
+        android:src="@mipmap/whitePlayButton2"
+        tools:text="G,D,V" />
 
 </LinearLayout>
