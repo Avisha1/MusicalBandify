@@ -35,8 +35,10 @@ public class ByGenreActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent PlayActivity = new Intent(ByGenreActivity.this, PlayActivity2.class);
-                startActivity(PlayActivity);
+
+
+                Intent InstrumentActivity = new Intent(ByGenreActivity.this, InstrumentsActivity.class);
+                startActivity(InstrumentActivity);
             }
         });
 
