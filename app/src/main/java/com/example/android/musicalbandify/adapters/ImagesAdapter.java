@@ -1,6 +1,7 @@
 package com.example.android.musicalbandify.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,12 +27,14 @@ public class ImagesAdapter extends BaseAdapter{
     private LayoutInflater mInflater;
     private ArrayList<Image> images;
     private boolean mIsGrid;
+    private View.OnClickListener onClickListener;
 
-    public ImagesAdapter(Context context, ArrayList<Image> images, boolean isGrid) {
+    public ImagesAdapter(Context context, ArrayList<Image> images, boolean isGrid,View.OnClickListener onClickListener) {
         this.mContext = context;
         this.mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.images = images;
         this.mIsGrid = isGrid;
+        this.onClickListener = onClickListener;
     }
 
     @Override
@@ -61,7 +64,7 @@ public class ImagesAdapter extends BaseAdapter{
                 convertView = mInflater.inflate(R.layout.li_friend, parent, false);
             }
             */
-            convertView = mInflater.inflate(R.layout.activity_play, parent, false);
+            convertView = mInflater.inflate(R.layout.taps_image, parent, false);
 
             holder = onCreateViewHolder(convertView);
         } else {
@@ -80,6 +83,7 @@ public class ImagesAdapter extends BaseAdapter{
     private ViewHolder onCreateViewHolder(View convertView) {
         ViewHolder holder = new ViewHolder();
         holder.img = (ImageView) convertView.findViewById(R.id.tap_img);
+        Log.d("TTTTT",holder.img.toString());
         convertView.setTag(holder);
         return holder;
     }
@@ -97,6 +101,7 @@ public class ImagesAdapter extends BaseAdapter{
 
                 holder.img.clearAnimation();
                 holder.img.setVisibility(v.GONE);
+                onClickListener.onClick(v);
             }
         });
 

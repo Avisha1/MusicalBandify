@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:columnWidth="120dp"
-            android:numColumns="3"/>
+            android:numColumns="5"/>
     </FrameLayout>
 
     <LinearLayout

@@ -16,6 +16,7 @@ import com.example.android.musicalbandify.R;
 public class InstrumentsActivity extends AppCompatActivity {
 
 
+    public static final String SONG_RESOURCE_ID = "SONG_RESOURCE_ID";
     Button btnDrums;
     Button btnVocals;
     Button btnLeadGuitar;
@@ -49,7 +50,7 @@ public class InstrumentsActivity extends AppCompatActivity {
                 }
 
                 Intent intent = new Intent(InstrumentsActivity.this, PlayActivity.class);
-                intent.putExtra("SONG_RESOURCE_ID", resourceChosen);
+                intent.putExtra(SONG_RESOURCE_ID, resourceChosen);
                 startActivity(intent);
             }
         });
