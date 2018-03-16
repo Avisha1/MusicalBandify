@@ -61,7 +61,7 @@ public class ImagesAdapter extends BaseAdapter{
                 convertView = mInflater.inflate(R.layout.li_friend, parent, false);
             }
             */
-            convertView = mInflater.inflate(R.layout.activity_play, parent, false);
+            convertView = mInflater.inflate(R.layout.taps_image, parent, false);
 
             holder = onCreateViewHolder(convertView);
         } else {
