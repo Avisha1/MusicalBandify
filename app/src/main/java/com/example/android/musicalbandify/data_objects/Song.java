@@ -8,14 +8,13 @@ public class Song {
 
     private String mName;
     private String mSinger;
-    private int mLength;
     private Stem [] mStems;
+    private int mImageResourceId;
 
-    public Song(String name, String singer, int length, Stem[] stemArr) {
+    public Song(String name, String singer, int imageResourceId) {
         mName = name;
         mSinger = singer;
-        mLength = length;
-        mStems = stemArr;
+        mImageResourceId = imageResourceId;
     }
 
     public String getName() {
@@ -26,12 +25,12 @@ public class Song {
         return mSinger;
     }
 
-    public int getLength() {
-        return mLength;
-    }
-
     public Stem[] getStems(){
         return mStems;
+    }
+
+    public int getImageResourceId(){
+        return mImageResourceId;
     }
 
     //TODO

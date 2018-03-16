@@ -1,55 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/list"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/song_list"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#333333">
-
-        <ImageView
-            android:id="@+id/backArrow"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:src="@mipmap/backIcon" />
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="By Genre - "
-            android:textSize="20dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textColor="#ffffff"/>
-
-        <android.support.v7.widget.SearchView
-            android:id="@+id/search"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textColor="#ffffff">
-        </android.support.v7.widget.SearchView>
-
-        <TextView
-            android:id="@+id/settings"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text=":"
-            android:padding="20dp"
-            />
-
-    </LinearLayout>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical" />
-
-
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:drawSelectorOnTop="true"
+    />

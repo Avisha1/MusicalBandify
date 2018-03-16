@@ -1,15 +1,19 @@
 package com.example.android.musicalbandify.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.android.musicalbandify.R;
+import com.example.android.musicalbandify.activities.PlayActivity;
 import com.example.android.musicalbandify.data_objects.Song;
 
 import java.util.List;
@@ -37,17 +41,34 @@ public class SongAdapter extends ArrayAdapter<Song> {
         // Get the {@link Song} object located at this position in the list
         Song currentSong = getItem(position);
 
-        TextView songName = listItemView.findViewById(R.id.name);
+        TextView songName = (TextView) listItemView.findViewById(R.id.song_name);
         songName.setText(currentSong.getName());
 
-        TextView singer = listItemView.findViewById(R.id.singer);
+        TextView singer = (TextView)listItemView.findViewById(R.id.singer);
         singer.setText(currentSong.getSinger());
 
-        TextView length = listItemView.findViewById(R.id.length);
-        length.setText(currentSong.getLength());
+        ImageView songIcon = (ImageView)listItemView.findViewById(R.id.picture);
+        songIcon.setImageResource(currentSong.getImageResourceId());
 
-        TextView stems = listItemView.findViewById(R.id.available_stems);
-        stems.setText(currentSong.getStemsAsString());
+        ImageView playButton = (ImageView)listItemView.findViewById(R.id.play_song_icon);
+        playButton.setImageResource(R.mipmap.white_play_button2);
+
+
+        if(currentSong.getName() == "Shape Of You"){
+            playButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent playActivity = new Intent(getContext(), PlayActivity.class);
+
+                }
+            });
+        }
+
+//        TextView length = (TextView)listItemView.findViewById(R.id.length);
+//        length.setText(currentSong.getLength());
+
+//        TextView stems = (TextView)listItemView.findViewById(R.id.available_stems);
+//        stems.setText(currentSong.getStemsAsString());
 
         return listItemView;
     }
