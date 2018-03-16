@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="menu_dots">#FFFF</color>
+    <color name="white">#FFFF</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>

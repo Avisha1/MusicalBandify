@@ -8,7 +8,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MainActivity"
+        <activity
+            android:name=".activities.MainActivity"
             android:label="@string/label_play">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +18,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.ByGenreActivity" />
-        <activity android:name=".activities.InstrumentsActivity"></activity>
+        <activity android:name=".activities.InstrumentsActivity" />
+        <activity
+            android:name=".activities.PlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_play"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".activities.PlayActivity2"
+            android:label="@string/title_activity_play"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
     </application>
 
 </manifest>
