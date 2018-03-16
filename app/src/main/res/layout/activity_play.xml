@@ -30,11 +30,11 @@
             android:layout_weight="10">
 
             <!--<TextView-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_weight="1"-->
-                <!--android:textColor="@color/white"-->
-                <!--android:text="Slow"/>-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:text="Slow"/>-->
 
             <ImageView
                 android:id="@+id/imageView"
@@ -44,11 +44,11 @@
                 android:background="@mipmap/rythem_bar"
                 android:scaleType="fitXY" />
             <!--<TextView-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_weight="1"-->
-                <!--android:textColor="@color/white"-->
-                <!--android:text="Fast"/>-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:text="Fast"/>-->
 
         </LinearLayout>
 

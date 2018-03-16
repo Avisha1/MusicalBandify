@@ -19,13 +19,7 @@
         </activity>
         <activity android:name=".activities.ByGenreActivity" />
         <activity android:name=".activities.InstrumentsActivity" />
-        <activity
-            android:name=".activities.PlayActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_play"
-            android:screenOrientation="landscape"
-            android:theme="@style/FullscreenTheme" />
-        <activity android:name=".activities.PlayActivity2"
+        <activity android:name=".activities.PlayActivity"
             android:label="@string/title_activity_play"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
